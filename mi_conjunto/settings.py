@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/6.1/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -85,8 +86,9 @@ WSGI_APPLICATION = 'mi_conjunto.wsgi.application'
 # Si Render provee una URL de base de datos, la usa; si no, usa tu PostgreSQL local
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://postgres:123@localhost:5432/bd_residencial',
-        conn_max_age=600
+        default=os.environ.get('DATABASE_URL'),
+        conn_max_age=600,
+        conn_health_checks=True,
     )
 }
 
