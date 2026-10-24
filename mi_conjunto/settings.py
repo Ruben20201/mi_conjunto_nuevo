@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'mi_conjunto.wsgi.application'
 # Si Render provee una URL de base de datos, la usa; si no, usa tu PostgreSQL local
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
+        default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3'),
         conn_max_age=600,
         conn_health_checks=True,
     )
