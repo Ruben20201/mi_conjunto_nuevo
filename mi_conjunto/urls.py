@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
+from django.contrib import admin
+from django.urls import path, include
 
 # Vista temporal de prueba para la página principal
 def home_view(request):
@@ -8,5 +10,5 @@ def home_view(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_view),
+    path('', include('core.urls')),  # Conecta las URLs de la app core
 ]
