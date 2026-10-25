@@ -1,16 +1,5 @@
 [
 {
-    "model": "core.perfilresidente",
-    "pk": 1,
-    "fields": {
-        "user": [
-            "rubenr"
-        ],
-        "apartamento": "casa 10",
-        "telefono": "3196804357"
-    }
-},
-{
     "model": "core.vehiculo",
     "pk": 1,
     "fields": {
@@ -28,6 +17,34 @@
         "contenido": "se hara una reunion para solucionar problemas del conjunto",
         "fecha_publicacion": "2026-10-25T19:56:37.362Z",
         "activo": true
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1500000$JBdIqSx13deImL0wTd6PBC$JFky3zf55mtbp6Zlj4SC5WeOAjzsWJhsQ1NGuZ+GaVc=",
+        "last_login": "2026-10-24T23:18:55.603Z",
+        "is_superuser": true,
+        "username": "rubenr",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-10-24T23:18:38.709Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.perfilresidente",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "rubenr"
+        ],
+        "apartamento": "casa 10",
+        "telefono": "3196804357"
     }
 }
 ]
