@@ -3,7 +3,9 @@
     "model": "core.perfilresidente",
     "pk": 1,
     "fields": {
-        "user": 1,
+        "user": [
+            "rubenr"
+        ],
         "apartamento": "casa 10",
         "telefono": "3196804357"
     }
@@ -16,6 +18,16 @@
         "marca_modelo": "bajaj",
         "color": "negra gris pieda",
         "residente": 1
+    }
+},
+{
+    "model": "core.boletin",
+    "pk": 1,
+    "fields": {
+        "titulo": "reunion 8:20 pm",
+        "contenido": "se hara una reunion para solucionar problemas del conjunto",
+        "fecha_publicacion": "2026-10-25T19:56:37.362Z",
+        "activo": true
     }
 }
 ]
