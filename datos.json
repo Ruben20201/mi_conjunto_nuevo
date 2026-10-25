@@ -20,6 +20,19 @@
     }
 },
 {
+    "model": "core.servicioresidente",
+    "pk": 1,
+    "fields": {
+        "nombre_profesional": "RUBEN",
+        "profesion_o_servicio": "PROGRAMADOR",
+        "categoria": "OTRO",
+        "apartamento": "casa 10",
+        "telefono_contacto": "3196804357",
+        "descripcion": "programador senior",
+        "activo": true
+    }
+},
+{
     "model": "auth.user",
     "fields": {
         "password": "pbkdf2_sha256$1500000$JBdIqSx13deImL0wTd6PBC$JFky3zf55mtbp6Zlj4SC5WeOAjzsWJhsQ1NGuZ+GaVc=",
