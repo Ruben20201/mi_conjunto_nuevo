@@ -10,6 +10,19 @@
     }
 },
 {
+    "model": "core.empleadoobra",
+    "pk": 1,
+    "fields": {
+        "nombre": "maria",
+        "cedula": "1000248700",
+        "arl_vigente": true,
+        "apartamento_responsable": 1,
+        "fecha_inicio": "2026-10-19",
+        "fecha_fin": "2026-10-25",
+        "activo": true
+    }
+},
+{
     "model": "core.boletin",
     "pk": 1,
     "fields": {
