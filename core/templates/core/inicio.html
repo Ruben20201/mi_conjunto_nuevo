@@ -6,22 +6,27 @@
     <title>Panel Principal - Mi Conjunto</title>
     <style>
         body { font-family: Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .container { max-width: 900px; margin: 0 auto; text-align: center; }
         h1 { color: #2c3e50; margin-bottom: 10px; }
         p.subtitle { color: #7f8c8d; margin-bottom: 30px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-        .card { background: white; border-radius: 10px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-decoration: none; color: #333; transition: transform 0.2s, box-shadow 0.2s; }
+        .card { background: white; border: 1px solid #0f0f0f; border-radius: 10px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-decoration: none; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
-        .card .icon { font-size: 40px; margin-bottom: 15px; }
+        .card .icon { font-size: 40px; margin-bottom: 15px;  }
         .card h3 { margin: 0 0 10px 0; color: #2c3e50; }
         .card p { font-size: 14px; color: #7f8c8d; margin: 0; }
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    
+   
+                
+
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>🏢 Control y Gestión del Conjunto</h1>
-    <p class="subtitle">Selecciona una opción para gestionar o consultar información del residencial.</p>
+    <h1>🏢 Control y Gestión del Conjunto Sanfrancisco</h1>
+    <p class="subtitle">Bienvenido al panel de control del Conjunto Sanfrancisco. Selecciona una opción para gestionar o consultar información del residencial.</p>
 
     <div class="grid">
         <!-- Tarjeta: Buscar Placa -->
@@ -53,7 +58,13 @@
              <p>Encuentra doctores, abogados y profesionales en el conjunto.</p>
         </a>
     </div>
-</div>
+     <div style="margin-top: 30px; background-color: #2a9cb1; color: rgb(255, 252, 252); text-align: center; padding: 15px; border-radius: 8px;">
+              <p style="margin: 0px; font-size: 14px;">ResiControl - Sistema de Gestión y Control Residencial</p>
+    </div>
 
+
+</div>
+   
+</div>
 </body>
 </html>

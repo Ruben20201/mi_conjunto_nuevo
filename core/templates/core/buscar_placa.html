@@ -6,14 +6,14 @@
     <title>Consulta de Placas - Mi Conjunto</title>
     <style>
         body { font-family: Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; }
-        .container { max-width: 600px; margin: 0 auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .container { max-width: 700px; margin: 0 auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         h1 { color: #2c3e50; text-align: center; }
         .search-box { display: flex; gap: 10px; margin-bottom: 20px; }
         input[type="text"] { flex: 1; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; text-transform: uppercase; }
         button { padding: 12px 20px; background-color: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
         button:hover { background-color: #219150; }
-        .card { background: #eef2f7; border-left: 5px solid #2980b9; padding: 15px; margin-top: 15px; border-radius: 4px; }
-        .no-results { color: #e74c3c; text-align: center; margin-top: 20px; font-weight: bold; }
+        .card { background: #eef2f7; border: 1px solid #0a0a0a; border-left: 5px solid #2980b9; padding: 15px; margin-top: 15px; border-radius: 4px; }
+        .no-results { color: #e74c3c;  text-align: center; margin-top: 20px; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -28,21 +28,36 @@
         <button type="submit">Buscar</button>
     </form>
 
+
     {% if query %}
-        <h2>Resultados para "{{ query }}"</h2>
-        {% if resultados %}
-            {% for v in resultados %}
-                <div class="card">
-                    <h3>Placa: {{ v.placa }}</h3>
-                    <p><strong>Marca/Modelo:</strong> {{ v.marca_modelo }}</p>
-                    <p><strong>Color:</strong> {{ v.color }}</p>
-                    <p><strong>Ubicación:</strong> Apto {{ v.residente.apartamento }} ({{ v.residente.user.username }})</p>
-                </div>
-            {% endfor %}
-        {% else %}
-            <p class="no-results">❌ No se encontró ningún vehículo registrado con esa placa.</p>
-        {% endif %}
-    {% endif %}
+    <h2>Resultados para "{{ query }}"</h2>
+    
+    {% if resultados %}
+        {% for v in resultados %}
+            <div class="card">
+                <h3>Placa: {{ v.placa }}</h3>
+                <p><strong>Marca/Modelo:</strong> {{ v.marca_modelo }}</p>
+                <p><strong>Color:</strong> {{ v.color }}</p>
+                <p><strong>Dueño:</strong> Apto {{ v.residente.apartamento }} ({{ v.residente.user.username }})</p>
+            </div>
+        {% endfor %}  <!-- 👈 1. Cierra el ciclo for aquí -->
+    
+    {% else %}
+        <!-- Mensaje si no hay resultados -->
+        <p>No se encontraron vehículos registrados con esa placa.</p>
+        <P>si deseas reportar al administrador escribe al whatsapp  del administrador <a href="https://wa.me/3196804357" 
+                        target="_blank" 
+                        style="background-color: #25d366; color: white; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-size: 0.9em; display: inline-block; margin-top: 4px;">
+                         💬 WhatsApp: {{ s.telefono_contacto }}
+        </a></p>
+        
+        
+    {% endif %}     <!-- 👈 2. Cierra el segundo if aquí -->
+
+{% endif %}   <!-- 👈 3. Cierra el primer if aquí -->
+     <div style="margin-top: 30px; background-color: #2a9cb1; color: rgb(255, 252, 252); text-align: center; padding: 15px; border-radius: 8px;">
+              <p style="margin: 0px; font-size: 14px;">ResiControl - Sistema de Gestión y Control Residencial</p>
+    </div>
 </div>
 
 </body>

@@ -9,9 +9,15 @@ def inicio(request):
 def buscar_placa(request):
     query = request.GET.get('q', '')
     resultados = []
+    
     if query:
+        # Cambia 'Vehiculo' por el nombre exacto de tu modelo de vehículos en models.py
         resultados = Vehiculo.objects.filter(placa__icontains=query)
-    return render(request, 'core/buscar_placa.html', {'resultados': resultados, 'query': query})
+        
+    return render(request, 'core/buscar_placa.html', {
+        'query': query,
+        'resultados': resultados
+    })
 
 def buscar_empleados(request):
     query = request.GET.get('q', '')

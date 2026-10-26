@@ -1,0 +1,7 @@
+actualizar datos en vs
+python manage.py dumpdata core auth.user --natural-foreign --natural-primary --indent 4 --output datos.json
+
+subirlos a github 
+git add datos.json
+git commit -m "intento ruben"
+git push origin main
